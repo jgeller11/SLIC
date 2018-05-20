@@ -43,10 +43,11 @@ body {
 }
 
 .menubar li {
-    padding: 8px 20px 8px 20px;
+    padding: 8px 40px 8px 40px;
 /*    width: 10%;*/
     background: lightgreen;
     margin: 0;
+    font-size: 20px;
     text-align: right;
     float: left;
     display: block;
@@ -54,6 +55,18 @@ body {
 /*    align-content: center;*/
 /*    vertical-align: bottom;*/
 /*    text-align: center;*/
+}
+
+p {
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 30px;
 }
 
 .menubar .active {
