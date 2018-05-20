@@ -1,0 +1,134 @@
+
+body {
+    margin: 0;
+    font-weight: 100;
+    font-family: helvetica;
+/*    line-height: 20px;*/
+/*    text-indent: 40px;*/
+}
+
+.parallaxBackground {
+    position: fixed;
+    min-height: 100%;
+    width: 100%;
+    top: 0%;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    padding: 0;
+}
+
+.menuBar {
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    top: 0%;
+    background: lightgreen;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    top: -10%;
+    transition: top 0.5s;
+/*    box-shadow: 0px 0px 3px 0px;*/
+}
+
+.menubar a {
+    color: black;
+    text-decoration: none;
+}
+
+.menubar li {
+    padding: 8px 20px 8px 20px;
+/*    width: 10%;*/
+    background: lightgreen;
+    margin: 0;
+    text-align: right;
+    float: left;
+    display: block;
+    min-width: 30px;
+/*    align-content: center;*/
+/*    vertical-align: bottom;*/
+/*    text-align: center;*/
+}
+
+.menubar .active {
+    background: white;
+}
+
+.menubar .active:hover {
+    background: lightblue;
+}
+
+
+.menubar li p{
+    text-align: center;
+    vertical-align: center;
+}
+.menubar li:hover{
+    background: white;
+}
+
+.downArrow {
+    background-image: url(arrowDown.png);
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    left: calc(50% - 50px);
+    bottom: .1%;
+    z-index: 0;
+}
+
+.mediaContainer {
+    width: 25%;
+    height: auto;
+    float: left;
+    display: inline;
+}
+
+.content {
+    width: 80%;
+    padding-top: 40%;
+    margin: 10%;
+    background-color: darkgray;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    outline: none;
+    border: none;
+    margin-bottom: 0;
+    margin-top: 10%;
+}
+
+.content:hover {
+    background-color: #333;
+}
+
+.mediacontainer.photo { 
+    background-color: aliceblue;
+}
+.mediacontainer.photo .content {
+    background-image: url(photoLocked.png);
+}
+
+.mediacontainer.audio { 
+    background-color: aquamarine;
+}
+.mediacontainer.audio .content {
+    background-image: url(audioLocked.png);
+}
+
+.mediacontainer.video { 
+    background-color: aliceblue;
+}
+.mediacontainer.video .content {
+    background-image: url(videoLocked.png);
+}
+
+.mediacontainer.text { 
+    background-color: aquamarine;
+}
+.mediacontainer.text .content {
+    background-image: url(textLocked.png);
+}

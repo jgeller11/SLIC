@@ -1,6 +1,97 @@
 <html>
-  <head></head>
-  <body>
-    <h1> SLIC PLANNING </h1>
-  </body>
+
+<head>
+    <title> SLIC </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="main.js"></script>
+</head>
+
+<body onload="fillContent(); parallax();">
+    <ul class="menuBar" id="menuBar">
+        <a href="index.html">
+            <li class="active">
+                <p>home</p>
+            </li>
+        </a>
+        <a href="media.html">
+            <li>
+                <p>media gallery</p>
+            </li>
+        </a>
+        <a href="mailto:jonathangeller@comcast.net">
+            <li>
+                <p>contact a jon</p>
+            </li>
+        </a>
+        <a href="jon.html">
+            <li>
+                <p>the button</p>
+            </li>
+        </a>
+
+
+    </ul>
+    <div class="parallaxBackground" id="whiteboard" style="background-image: url(eric.png)"></div>
+    <div class="downArrow" id="downArrow"></div>
+    <div id="journal" class="parallaxBackground" style="background-color: white; position: relative; width: 88%; top: 100%; min-height: 500%; padding: 6%;">
+
+        <p> welcome to your birthday present!!!! here i'm just leaving a bunch of stuff, videos, pictures, puzzles, anything that i think might help you miss me a lil less. there'll be more every day, and if you can solve the puzzles you can find some new stuff too. i hope you like it!!!</p>
+
+        <p id="april29">hkdjfhg</p>
+        <script>
+            if (!dateLock(4, 29)) {
+                document.getElementById('april29').style.display = "none"
+            }
+
+        </script>
+
+
+
+    </div>
+    <script>
+        window.requestAnimationFrame = window.requestAnimationFrame ||
+            window.mozRequestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            window.msRequestAnimationFrame ||
+            function(f) {
+                setTimeout(f, 1000 / 60)
+            }
+
+        var scrolldiv = document.getElementById('whiteboard')
+        var arrow = document.getElementById('downArrow')
+        var menubar = document.getElementById('menuBar')
+
+        var scrollheight = document.body.scrollHeight // height of entire document
+        var windowheight = window.innerHeight // height of browser window
+
+        function parallax() {
+            var scrolltop = window.pageYOffset // get number of pixels document has scrolled vertically
+            var scrollamount = (scrolltop / windowheight) // get amount scrolled in percent of screen
+
+            scrolldiv.style.top = -scrollamount * 25 + '%'
+            arrow.style.bottom = scrollamount * 90 + 0.1 + '%'
+            if ((windowheight - scrolltop) < 67) {
+                menubar.style.top = "0%";
+
+
+            } else {
+                menubar.style.top = "-66px";
+            }
+        }
+
+
+        window.addEventListener('scroll', function() { // on page scroll
+            requestAnimationFrame(parallax) // call parallax() on next available screen paint
+        }, false)
+
+        window.addEventListener('resize', function() { // on window resize
+            var scrolltop = window.pageYOffset // get number of pixels document has scrolled vertically
+            var scrollamount = (scrolltop / (scrollheight - windowheight)) * 100 // get amount scrolled (in %)
+            imag.style.left = ((100 - int(imag.style.width)) / 2).toString + '%'
+        }, false)
+
+    </script>
+
+</body>
+
 </html>
