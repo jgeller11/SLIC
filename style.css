@@ -58,15 +58,19 @@ body {
 }
 
 p, li {
-    font-size: 40px;
+    font-size: 20pt;
 }
 
 h1 {
-    font-size: 80px;
+    font-size: 40pt;
 }
 
 h2 {
-    font-size: 60px;
+    font-size: 30pt;
+}
+
+h3 {
+    font-size: 25pt;
 }
 
 .menubar .active {
